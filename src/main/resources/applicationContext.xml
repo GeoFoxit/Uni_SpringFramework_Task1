@@ -7,6 +7,8 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
+    <context:property-placeholder location="classpath:gameLauncher.properties"/>
+
     <bean
             id="gameBean"
             class="george.jspring.PlaneGame"><!--Can be changed-->
@@ -17,7 +19,7 @@
             id="gameLauncherBean"
             class="george.jspring.GameLauncher">
         <property name="game" ref="gameBean" />
-        <property name="user" value="Mike" />
+        <property name="userRole" value="${gameLauncher.userRole}" />
     </bean>
 
 </beans>
