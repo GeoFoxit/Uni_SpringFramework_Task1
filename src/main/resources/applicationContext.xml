@@ -17,7 +17,8 @@
 
     <bean
             id="gameLauncherBean"
-            class="george.jspring.GameLauncher">
+            class="george.jspring.GameLauncher"
+            scope="prototype">
         <property name="game" ref="gameBean" />
         <property name="userRole" value="${gameLauncher.userRole}" />
     </bean>

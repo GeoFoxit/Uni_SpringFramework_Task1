@@ -12,8 +12,11 @@ public class TestSpring {
 //        Game g = context.getBean("gameBean", Game.class);
 //        GameLauncher gl = new GameLauncher(g);
 
-        GameLauncher gl = context.getBean("gameLauncherBean", GameLauncher.class);
-        gl.play();
+        GameLauncher gl0 = context.getBean("gameLauncherBean", GameLauncher.class);
+        GameLauncher gl1 = context.getBean("gameLauncherBean", GameLauncher.class);
+        gl0.play();
+
+        System.out.println(gl0 == gl1);
 
         context.close();
     }
