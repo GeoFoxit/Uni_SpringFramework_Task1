@@ -16,7 +16,8 @@
     <bean
             id="gameLauncherBean"
             class="george.jspring.GameLauncher">
-        <constructor-arg ref="gameBean"/>
+        <property name="game" ref="gameBean" />
+        <property name="user" value="Mike" />
     </bean>
 
 </beans>
