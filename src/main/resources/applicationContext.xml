@@ -7,9 +7,16 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean id="gameBean"
-          class="george.jspring.PlaneGame"><!--Can be changed-->
+    <bean
+            id="gameBean"
+            class="george.jspring.PlaneGame"><!--Can be changed-->
         <!--Main aim is to move flexibility from Code into XML config-->
+    </bean>
+
+    <bean
+            id="gameLauncherBean"
+            class="george.jspring.GameLauncher">
+        <constructor-arg ref="gameBean"/>
     </bean>
 
 </beans>
