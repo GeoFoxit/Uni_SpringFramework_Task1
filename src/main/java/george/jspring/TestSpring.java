@@ -8,8 +8,11 @@ public class TestSpring {
                 "applicationContext.xml"
         );
 
-        TestBean tb = context.getBean("testBean", TestBean.class);
-        System.out.println(tb.getName());
+        Game g = context.getBean("gameBean", Game.class);
+
+        GameLauncher gl = new GameLauncher(g);
+
+        gl.play();
 
         context.close();
     }
