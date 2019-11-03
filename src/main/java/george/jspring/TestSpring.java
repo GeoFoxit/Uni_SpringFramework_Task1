@@ -8,15 +8,12 @@ public class TestSpring {
                 "applicationContext.xml"
         );
 
-//        No need to it
-//        Game g = context.getBean("gameBean", Game.class);
-//        GameLauncher gl = new GameLauncher(g);
-
-        GameLauncher gl0 = context.getBean("gameLauncherBean", GameLauncher.class);
-        GameLauncher gl1 = context.getBean("gameLauncherBean", GameLauncher.class);
-        gl0.play();
+        GameLauncher gl0 = context.getBean("gameLauncher", GameLauncher.class);
+        GameLauncher gl1 = context.getBean("gameLauncher", GameLauncher.class);
 
         System.out.println(gl0 == gl1);
+
+        gl0.play();
 
         context.close();
     }
