@@ -10,9 +10,6 @@ public class TestSpring {
         );
 
         GameLauncher gl0 = context.getBean("gameLauncher", GameLauncher.class);
-        GameLauncher gl1 = context.getBean("gameLauncher", GameLauncher.class);
-
-        System.out.println(gl0 == gl1);
 
         gl0.play();
 

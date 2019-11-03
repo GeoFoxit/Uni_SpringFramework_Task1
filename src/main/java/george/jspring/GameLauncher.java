@@ -6,13 +6,14 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-@Component
 public class GameLauncher {
-    @Autowired
-    @Qualifier("planeGame")
     private Game game;
     @Value("${gameLauncher.userRole}")
     private String userRole;
+
+    public GameLauncher(Game game) {
+        this.game = game;
+    }
 
     public void play() {
         game.run();
