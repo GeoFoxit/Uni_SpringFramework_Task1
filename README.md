@@ -1,2 +1,2 @@
-# JavaSpringSimpleWebApp
- Java Spring simple web application sample for university task
+# JavaSpringSimpleExample
+ Java Spring simple application sample for university task
